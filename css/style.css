@@ -1,0 +1,117 @@
+/* ===== Base Styles ===== */
+:root {
+  --primary-color: #4361ee; /* Soft blue (adjust to your brand) */
+  --text-color: #333;
+  --background-light: #f8f9fa;
+  --border-radius: 8px;
+}
+
+body {
+  font-family:
+    "Inter",
+    -apple-system,
+    sans-serif; /* Modern font stack */
+  line-height: 1.6;
+  color: var(--text-color);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: var(--background-light);
+}
+
+/* ===== Project Card ===== */
+.project {
+  background: white;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.project:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.project h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+}
+
+.project h2 a {
+  color: var(--text-color);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+}
+
+.project h2 a:hover {
+  border-bottom: 2px solid var(--primary-color);
+}
+
+/* GIF/Screenshot */
+.img2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+  border-radius: var(--border-radius);
+  margin: 1rem 0;
+  border: 1px solid #eee;
+}
+
+/* Tech Stack */
+.tech-stack {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+}
+
+.tech-stack span {
+  background: #e9ecef;
+  padding: 0.3rem 0.6rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  color: #555;
+}
+
+/* Links */
+.project-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: var(--primary-color);
+  color: white !important;
+  text-decoration: none;
+  border-radius: var(--border-radius);
+  font-weight: 500;
+  transition: background 0.2s ease;
+}
+
+.button:hover {
+  background: #3a56d4; /* Slightly darker on hover */
+}
+
+/* ===== Responsive Adjustments ===== */
+@media (max-width: 768px) {
+  .project {
+    padding: 1rem;
+  }
+
+  .project-links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .button {
+    text-align: center;
+  }
+}
