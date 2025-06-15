@@ -2,44 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>My Website</title>
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React + TS</title>
   </head>
-
   <body>
-    <header>
-      <h1>Coen Potgieter Website</h1>
-      <p>test</p>
-    </header>
-
-    <section class="project">
-      <h2><a href="https://github.com/..." target="_blank">Faces VAE</a></h2>
-      <p>A generative model that converts sketches to photorealistic faces.</p>
-      <div class="img2">
-        <img
-          src="https://raw.githubusercontent.com/Coen-Potgieter/faces-VAE/main/assets/demo/drawing.gif"
-          alt="Demo"
-          loading="lazy"
-        />
-        <img
-          src="https://raw.githubusercontent.com/Coen-Potgieter/faces-VAE/main/assets/demo/sliders.gif"
-          style="width: 35%"
-          alt="Demo"
-          loading="lazy"
-        />
-      </div>
-      <ul>
-        <li>Latent space walk visualization</li>
-        <li>Optimized for mobile inference</li>
-      </ul>
-      <div class="tech-stack">
-        <span>Python</span>
-        <span>PyTorch</span>
-      </div>
-      <div class="project-links">
-        <a href="https://github.com/..." class="button">Code</a>
-        <a href="#" class="button">Blog Post</a>
-      </div>
-    </section>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
