@@ -1,4 +1,4 @@
-import { tagColours } from "../helper";
+import { tagColours } from "../data";
 type TagProp = {
   tagName: string;
 };
@@ -6,11 +6,11 @@ type TagProp = {
 const Tag: React.FC<TagProp> = ({ tagName }) => {
   const fallBackColour = "#aaaaaa";
   return (
-    <div className="flex items-center gap-2 px-2 py-1 rounded-full bg-gray-200">
+    <div className="flex items-center justify-center gap-2 px-2 py-1 rounded-full">
       <p className="font-bold text-sm">{tagName}</p>
       <svg
-        width="16" // Explicit width
-        height="16" // Explicit height
+        width="16"
+        height="16"
         fill={
           tagColours.has(tagName) ? tagColours.get(tagName) : fallBackColour
         }

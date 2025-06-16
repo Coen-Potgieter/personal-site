@@ -3,7 +3,7 @@ import ProjectTitle from "./ProjectTitle";
 
 type ProjectCardProps = {
   title: string;
-  techStack: string[];
+  topicTags: string[];
   description: string;
   demoVids: string[];
   gitHubLink: string;
@@ -11,35 +11,40 @@ type ProjectCardProps = {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
   title,
-  techStack,
+  topicTags,
   description,
   demoVids,
   gitHubLink,
 }) => {
-  const cardWidth = demoVids.length >= 2 ? " w-8/12" : " w-1/3";
+  const isWideCard: boolean = demoVids.length >= 2;
+  const cardWidth = isWideCard ? " w-12/12" : " w-[49%]";
+
+  const handleClick = () => {
+    // Could add click analytics here??
+    window.open(gitHubLink, "_blank", "noopener,noreferrer");
+  };
   return (
     <div
+      onClick={handleClick}
       className={
-        `flex flex-col h-[50vh] border-2 border-yellow-300 rounded-2xl items-center shadow-lg` +
+        `flex cursor-pointer flex-col h-fit rounded-2xl items-center shadow-xl transition duration-100 ease-in-out hover:scale-101 hover:bg-my-beige hover:shadow-2xl` +
         cardWidth
       }
     >
-      <div className="flex w-full h-1/6 justify-between items-center bg-yellow-400">
-        <ProjectTitle title={title} gitHubLink={gitHubLink} />
-        <div className="flex flex-col-reverse flex-wrap-reverse gap-x-2 gap-y-0.5 h-[4em] w-fit border-2 border-black">
-          {techStack.map((item, id) => {
+      <div className="flex w-full h-[8vh] justify-between items-center pl-10 pr-5">
+        <ProjectTitle title={title} />
+        <div className="flex flex-col-reverse flex-wrap-reverse gap-x-2 gap-y-0.5 h-[4em] w-fit">
+          {topicTags.map((item, id) => {
             return <Tag tagName={item} key={id} />;
           })}
         </div>
       </div>
-      <div className="flex w-fit justify-around h-2/3 gap-x-2">
+      <div className="flex h-[40vh] justify-evenly gap-x-2">
         {demoVids.map((link, id) => {
           return <img src={link} key={id} alt={"Demo Gif #" + id} />;
         })}
       </div>
-      <p className="text-xl/tight w-10/12 h-1/6 pt-2 line-clamp-1">
-        {description}
-      </p>
+      <p className="text-xl/tight w-10/12 h-1/6 pt-2 pb-5">{description}</p>
     </div>
   );
 };

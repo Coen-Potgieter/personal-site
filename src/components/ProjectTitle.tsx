@@ -1,25 +1,19 @@
 type ProjectTitleProps = {
   title: string;
-  gitHubLink: string;
 };
 
-const ProjectTitle: React.FC<ProjectTitleProps> = ({ title, gitHubLink }) => {
-  const handleClick = () => {
-    // Could add click analytics here??
-    window.open(gitHubLink, "_blank", "noopener,noreferrer");
-  };
-
+const ProjectTitle: React.FC<ProjectTitleProps> = ({ title }) => {
+  const gitHubLogoSize = 30;
   return (
-    <div
-      onClick={handleClick}
-      className="flex flex-row bg-blue-300 h-full self-start hover:text-green-700 items-center justify-center cursor-pointer"
-    >
-      <h1 className="pl-5 text-2xl font-bold">{title}</h1>
+    <div className="flex items-center justify-start gap-x-3 h-full text-black">
+      <h1 className="text-4xl font-bold mb-0 border-b-3 pb-0 font-project-title">
+        {title}
+      </h1>
       <svg
-        className="scale-50"
-        width="98"
-        height="96"
+        width={gitHubLogoSize} // Direct control
+        height={gitHubLogoSize} // Maintain aspect ratio
         xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 98 96" // Preserve original coordinate system
       >
         <path
           fillRule="evenodd"
