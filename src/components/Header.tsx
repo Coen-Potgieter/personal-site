@@ -1,18 +1,31 @@
-type HeaderProps = {
-  height: number;
-};
-const Header: React.FC<HeaderProps> = ({ height }) => {
+import { useState } from "react";
+import ToggleArrow from "./ToggleArrow";
+
+const Header: React.FC = () => {
+  const [isExpanded, setIsExpanded] = useState(true);
   return (
-    <div
-      className="flex flex-row gap-10 w-full bg-my-green text-white text-xl"
-      style={{ height: `${height}vh` }}
+    <header
+      className={`
+      bg-white shadow-md
+      transition-all duration-300 ease-in-out
+      overflow-hidden
+      ${isExpanded ? "max-h-40" : "max-h-12"}
+    `}
     >
-      <button className="cursor-pointer hover:bg-my-yellow" type="button">
-        <p>Projects</p>
-        <p>Showcase</p>
-      </button>
-      <p>this is a header</p>
-    </div>
+      <div className="flex justify-between items-center p-4">
+        <h1 className="text-4xl font-bold">Coen Potgieter</h1>
+        <ToggleArrow
+          isExpanded={isExpanded}
+          toggle={() => setIsExpanded(!isExpanded)}
+        />
+      </div>
+
+      {/* Header content that will collapse */}
+      <div className="p-4">
+        <nav>Your navigation links</nav>
+        <p>Additional header content</p>
+      </div>
+    </header>
   );
 };
 
