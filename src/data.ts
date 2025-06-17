@@ -6,6 +6,12 @@ export const tagColours = new Map<string, string>([
   ["TensorFlow", "#FF6F00"], // TensorFlow orange
 ]);
 
+export const availablePages = {
+  PROJECTS: "projects",
+  ABOUT: "about",
+  CV: "cv",
+};
+
 export const PROJECT_DATA = [
   {
     title: "Latent Face Explorer",

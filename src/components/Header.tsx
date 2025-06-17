@@ -1,17 +1,84 @@
+import GitHubSVG from "../assets/GitHubSVG";
+import LinkedInSVG from "../assets/LinkedInSVG";
+import HeaderButton from "./HeaderButton";
+import { availablePages } from "../data";
+
 type HeaderProps = {
   height: number;
+  width: number;
+  currentPage: string;
+  onPageChange: (newPage: string) => void;
 };
-const Header: React.FC<HeaderProps> = ({ height }) => {
+const Header: React.FC<HeaderProps> = ({
+  height,
+  width,
+  currentPage,
+  onPageChange,
+}) => {
+  const handleProfileClick = (platform: string) => {
+    if (platform === "github") {
+      window.open(
+        "https://github.com/Coen-Potgieter",
+        "_blank",
+        "noopener,noreferrer",
+      );
+    } else if (platform === "linkedin") {
+      window.open(
+        "https://www.linkedin.com/in/coen-potgieter/",
+        "_blank",
+        "noopener,noreferrer",
+      );
+    }
+  };
   return (
     <div
-      className="flex flex-row gap-10 w-full bg-my-green text-white text-xl"
+      className="flex justify-start w-full bg-transparent text-black text-xl"
       style={{ height: `${height}vh` }}
     >
-      <button className="cursor-pointer hover:bg-my-yellow" type="button">
-        <p>Projects</p>
-        <p>Showcase</p>
-      </button>
-      <p>this is a header</p>
+      <div
+        className="flex flex-col w-fit h-screen bg-my-beige justify-start pt-5 items-center text-3xl font-bold"
+        style={{ width: `${width}vw` }}
+      >
+        <h1 className="text-my-green1 font-normal">Coen</h1>
+        <h1>Potgieter</h1>
+        <div className="flex gap-x-3 pt-3">
+          <button
+            onClick={() => handleProfileClick("github")}
+            className="cursor-pointer hover:text-my-green1 transition duration-50 ease-in-out hover:scale-120"
+          >
+            <GitHubSVG size={25} />
+          </button>
+
+          <button
+            onClick={() => handleProfileClick("linkedin")}
+            className="cursor-pointer hover:text-linkedin-highlight transition duration-50 ease-in-out hover:scale-120"
+          >
+            <LinkedInSVG size={25} />
+          </button>
+        </div>
+      </div>
+      <div className="flex justify-center w-full">
+        <div className="flex justify-center w-full backdrop-blur-md bg-my-beige/20 px-10 gap-x-10 pt-2 h-fit border-b-2 rounded-xl">
+          <HeaderButton
+            text="Projects"
+            pageId={availablePages.PROJECTS}
+            currentPage={currentPage}
+            onPageChange={onPageChange}
+          />
+          <HeaderButton
+            text="CV"
+            pageId={availablePages.CV}
+            currentPage={currentPage}
+            onPageChange={onPageChange}
+          />
+          <HeaderButton
+            text="About"
+            pageId={availablePages.ABOUT}
+            currentPage={currentPage}
+            onPageChange={onPageChange}
+          />
+        </div>
+      </div>
     </div>
   );
 };

@@ -1,8 +1,15 @@
 import ProjectPage from "./ProjectPage";
-const RenderPage: React.FC = () => {
+import { availablePages } from "../data";
+
+type RenderPageProps = {
+  currentPage: string;
+};
+const RenderPage: React.FC<RenderPageProps> = ({ currentPage }) => {
   return (
     <>
-      <ProjectPage />
+      {currentPage === availablePages.PROJECTS && <ProjectPage />}
+      {currentPage === availablePages.CV && <p>coming soon</p>}
+      {currentPage === availablePages.ABOUT && <p>coming soon</p>}
     </>
   );
 };
