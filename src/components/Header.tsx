@@ -36,7 +36,7 @@ const Header: React.FC<HeaderProps> = ({
       style={{ height: `${height}vh` }}
     >
       <div
-        className="flex flex-col w-fit h-screen bg-my-beige justify-start pt-5 items-center text-3xl font-bold"
+        className="flex flex-col w-fit h-screen justify-start bg-my-white1 pt-5 items-center text-3xl font-bold"
         style={{ width: `${width}vw` }}
       >
         <h1 className="text-my-green1 font-normal">Coen</h1>
@@ -57,8 +57,8 @@ const Header: React.FC<HeaderProps> = ({
           </button>
         </div>
       </div>
-      <div className="flex justify-center w-full">
-        <div className="flex justify-center w-full backdrop-blur-md bg-my-beige/20 px-10 gap-x-10 pt-2 h-fit border-b-2 rounded-xl">
+      <div className="flex justify-center w-full bg-my-white1/10 backdrop-blur-md h-fit">
+        <div className="flex justify-center w-fit px-10 gap-x-10 pt-2 h-fit border-b-2 rounded-b-xl">
           <HeaderButton
             text="Projects"
             pageId={availablePages.PROJECTS}

@@ -1,6 +1,9 @@
 @import "tailwindcss";
 
 @theme {
+  --color-my-white1: #fdf9ee;
+  --color-my-white2: #fdf6e3;
+  --color-my-white3: #eee8d5;
   --color-my-white: #f5f7f8;
   --color-my-yellow: #f4ce14;
   --color-my-green: #495e57;
@@ -10,9 +13,7 @@
   --color-my-green1: #1a6900;
   --color-github-highlight: #104c35;
   --color-linkedin-highlight: #1566c2;
-}
-
-body {
-  background-color: #fef5ed;
-  font-family: "Roboto Condensed";
+  --font-alumni: "Alumni Sans Pinstripe";
+  --font-tinos: "Tinos";
+  --font-space-mono: "Space Mono";
 }

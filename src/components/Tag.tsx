@@ -6,7 +6,7 @@ type TagProp = {
 const Tag: React.FC<TagProp> = ({ tagName }) => {
   const fallBackColour = "#aaaaaa";
   return (
-    <div className="flex items-center justify-center gap-2 px-2 py-1 rounded-full">
+    <div className="flex items-center justify-center gap-2 px-2 py-1 rounded-full font-space-mono">
       <p className="font-bold text-sm">{tagName}</p>
       <svg
         width="16"

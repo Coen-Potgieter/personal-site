@@ -11,18 +11,20 @@ const HeaderButton: React.FC<HeaderButtonProps> = ({
   currentPage,
   onPageChange,
 }) => {
+  const activePageStyle = "text-my-green1 hover:text-my-green1";
   return (
-    <div className=" flex flex-col gap-0 h-fit items-center">
+    <div className=" flex flex-col font-bold gap-0 h-fit items-center pb-1 text-transparent hover:text-my-green1/20">
       <button
-        className="cursor-pointer"
+        className="cursor-pointer text-black"
         type="button"
         onClick={() => onPageChange(pageId)}
       >
         {text}
       </button>
-      {currentPage === pageId && (
-        <DotSVG size={15} className="text-my-green1" />
-      )}
+      <DotSVG
+        size={15}
+        className={currentPage === pageId ? activePageStyle : ""}
+      />
     </div>
   );
 };
