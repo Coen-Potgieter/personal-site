@@ -1,19 +1,31 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --color-my-white1: #fdf9ee;
   --color-my-white2: #fdf6e3;
-  --color-my-white3: #eee8d5;
-  --color-my-white: #f5f7f8;
-  --color-my-yellow: #f4ce14;
-  --color-my-green: #495e57;
-  --color-my-black: #45474b;
-  --color-my-beige: #fff5e4;
-  --color-my-green2: #347928;
   --color-my-green1: #1a6900;
+  --color-my-black1: #2a2a2d;
+  --color-my-black2: #1f1f1f;
+  --color-my-orange1: #fb9e3a;
   --color-github-highlight: #104c35;
   --color-linkedin-highlight: #1566c2;
   --font-alumni: "Alumni Sans Pinstripe";
   --font-tinos: "Tinos";
   --font-space-mono: "Space Mono";
+}
+
+/* Transition Animation Colours */
+@layer base {
+  *,
+  *::before,
+  *::after {
+    @apply transition-colors duration-400;
+  }
+  html,
+  body {
+    @apply bg-my-white1 dark:bg-my-black1; /* Or your dark color */
+    min-height: 100vh;
+  }
 }

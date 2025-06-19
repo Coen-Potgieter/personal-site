@@ -1,7 +1,8 @@
 import GitHubSVG from "../assets/GitHubSVG";
 import LinkedInSVG from "../assets/LinkedInSVG";
 import HeaderButton from "./HeaderButton";
-import { availablePages } from "../data";
+import { availablePages, aboutMe } from "../data";
+import ThemeToggleButton from "./ThemeToggleButton";
 
 type HeaderProps = {
   height: number;
@@ -32,16 +33,24 @@ const Header: React.FC<HeaderProps> = ({
   };
   return (
     <div
-      className="flex justify-start w-full bg-transparent text-black text-xl"
+      className="flex justify-start w-full bg-transparent text-black dark:text-white text-xl"
       style={{ height: `${height}vh` }}
     >
       <div
-        className="flex flex-col w-fit h-screen justify-start bg-my-white1 pt-5 items-center text-3xl font-bold"
+        className="flex flex-col gap-y-3 w-fit h-screen justify-start bg-my-white1 dark:bg-my-black1 pt-5 items-center text-3xl font-bold"
         style={{ width: `${width}vw` }}
       >
-        <h1 className="text-my-green1 font-normal">Coen</h1>
-        <h1>Potgieter</h1>
-        <div className="flex gap-x-3 pt-3">
+        <div className="flex flex-col items-center">
+          <h1 className="text-my-orange1 dark:text-my-green1 font-normal">
+            Coen
+          </h1>
+          <h1>Potgieter</h1>
+
+          <p className="font-space-mono font-normal text-center text-sm pt-2">
+            {aboutMe.small}
+          </p>
+        </div>
+        <div className="flex gap-x-3">
           <button
             onClick={() => handleProfileClick("github")}
             className="cursor-pointer hover:text-my-green1 transition duration-50 ease-in-out hover:scale-120"
@@ -57,8 +66,8 @@ const Header: React.FC<HeaderProps> = ({
           </button>
         </div>
       </div>
-      <div className="flex justify-center w-full bg-my-white1/10 backdrop-blur-md h-fit">
-        <div className="flex justify-center w-fit px-10 gap-x-10 pt-2 h-fit border-b-2 rounded-b-xl">
+      <div className="flex justify-center w-full bg-my-white1/10 dark:bg-my-black1/10 backdrop-blur-md h-fit">
+        <div className="flex justify-center w-fit px-10 gap-x-10 pt-2 h-fit border-b-2 dark:border-white/50 rounded-b-xl">
           <HeaderButton
             text="Projects"
             pageId={availablePages.PROJECTS}
@@ -79,6 +88,8 @@ const Header: React.FC<HeaderProps> = ({
           />
         </div>
       </div>
+
+      <ThemeToggleButton />
     </div>
   );
 };

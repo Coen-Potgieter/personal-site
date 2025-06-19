@@ -6,6 +6,12 @@ export const tagColours = new Map<string, string>([
   ["TensorFlow", "#FF6F00"], // TensorFlow orange
 ]);
 
+export const aboutMe = {
+  small:
+    "I Am A Final Year Data Engineering Student At Stellenbosch University Looking For A Job",
+  big: "THIS IS LONG BIG TEXT",
+};
+
 export const availablePages = {
   PROJECTS: "projects",
   ABOUT: "about",

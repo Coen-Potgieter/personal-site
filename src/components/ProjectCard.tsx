@@ -27,7 +27,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
     <div
       onClick={handleClick}
       className={
-        `flex cursor-pointer flex-col h-fit rounded-2xl items-center shadow-xl transition duration-100 ease-in-out hover:scale-101 hover:bg-my-white2 hover:shadow-2xl` +
+        `flex cursor-pointer dark:text-white flex-col h-fit rounded-2xl items-center shadow-xl dark:shadow-white/20 transition duration-100 ease-in-out hover:scale-101 hover:bg-my-white2 hover:dark:bg-my-black2 hover:shadow-2xl` +
         cardWidth
       }
     >
