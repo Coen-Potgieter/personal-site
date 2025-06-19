@@ -14,8 +14,10 @@ function App() {
     setCurrentPage(newPage);
   }
 
-  const headerHeight = 8;
+  let headerHeight = 8;
   const sidePanelWidth = 10;
+
+  if (currentPage === availablePages.CV) headerHeight = 0;
   return (
     <ThemeProvider>
       <div className="flex flex-col h-screen bg-my-white1 dark:bg-my-black1 font-tinos">
