@@ -39,9 +39,16 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           })}
         </div>
       </div>
-      <div className="flex h-[40vh] justify-evenly gap-x-2">
+      <div className="flex max-h-[40vh] justify-evenly gap-x-2 pl-2 pr-4">
         {demoVids.map((link, id) => {
-          return <img src={link} key={id} alt={"Demo Gif #" + id} />;
+          return (
+            <img
+              src={link}
+              key={id}
+              className="min-w-1/2"
+              alt={"Demo Gif #" + id}
+            />
+          );
         })}
       </div>
       <p className="text-xl/tight w-10/12 h-1/6 pt-2 pb-5">{description}</p>

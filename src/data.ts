@@ -1,9 +1,11 @@
 export const tagColours = new Map<string, string>([
-  ["Python", "#3776AB"], // Python blue
-  ["C++", "#00599C"], // C++ blue (darker than Python)
-  ["SFML", "#8CC24A"], // Fresh green (SFML's branding)
-  ["Pygame", "#FFD43B"], // Python yellow (Pygame's heritage)
-  ["TensorFlow", "#FF6F00"], // TensorFlow orange
+  ["Python", "#306998"], // Slightly darker Python blue
+  ["C++", "#00599C"], // Deep C++ blue (stays as the darker tone)
+  ["SFML", "#8CC24A"], // Green—aligned with SFML’s fresh branding
+  ["Pygame", "#FFD43B"], // Pythonic yellow
+  ["TensorFlow", "#FF6F00"], // Signature TensorFlow orange
+  ["React", "#8E44AD"], // Developer purple (fits devtools, frontend)
+  ["NLP", "#3498DB"], // Light tech blue (suggests cloud/data/lang)
 ]);
 
 export const aboutMe = {
@@ -19,6 +21,17 @@ export const availablePages = {
 };
 
 export const PROJECT_DATA = [
+  {
+    title: "Word Embedding Playground",
+    topicTags: ["C++", "React", "NLP"],
+    description:
+      "An interactive React web app for exploring the structure and logic of word embeddings using the GloVe dataset. Includes real-time vector arithmetic, similarity search, and PCA-based 3D visualization—all powered by precomputed data processed in C++.",
+    demoVids: [
+      "https://raw.githubusercontent.com/Coen-Potgieter/word-embeddings-playground/main/assets/demo/cos-sim.gif",
+      "https://raw.githubusercontent.com/Coen-Potgieter/word-embeddings-playground/main/assets/demo/linguistic-arithmetic.gif",
+    ],
+    gitHubLink: "https://github.com/Coen-Potgieter/word-embeddings-playground",
+  },
   {
     title: "Latent Face Explorer",
     topicTags: ["Python", "TensorFlow", "Pygame"],
@@ -45,7 +58,8 @@ export const PROJECT_DATA = [
   {
     title: "ML Flappy Bird",
     topicTags: ["Python", "Pygame"],
-    description: "Coming Soon",
+    description:
+      "A self-learning Flappy Bird clone built in Python with Pygame, where a lightweight neural network controls the bird’s actions. Populations of networks are evolved using a genetic algorithm—through selection, crossover, and mutation—until they consistently achieve perfect, infinite-scoring gameplay without human input.",
     demoVids: [
       "https://raw.githubusercontent.com/Coen-Potgieter/ml-flappy-bird/main/Assets/demo.gif",
     ],

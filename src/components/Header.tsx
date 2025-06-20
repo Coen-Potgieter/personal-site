@@ -37,7 +37,7 @@ const Header: React.FC<HeaderProps> = ({
       style={{ height: `${height}vh` }}
     >
       <div
-        className="flex flex-col gap-y-3 w-fit h-screen justify-start bg-my-white1 dark:bg-my-black1 pt-5 items-center text-3xl font-bold"
+        className="flex flex-col gap-y-3 w-fit h-screen justify-start bg-my-white1 dark:bg-my-black1 px-5 pt-5 items-center text-3xl font-bold"
         style={{ width: `${width}vw` }}
       >
         <div className="flex flex-col items-center">
