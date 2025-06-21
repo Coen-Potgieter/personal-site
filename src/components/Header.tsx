@@ -86,6 +86,12 @@ const Header: React.FC<HeaderProps> = ({
             currentPage={currentPage}
             onPageChange={onPageChange}
           />
+          <HeaderButton
+            text="Log"
+            pageId={availablePages.LOG}
+            currentPage={currentPage}
+            onPageChange={onPageChange}
+          />
         </div>
       </div>
 

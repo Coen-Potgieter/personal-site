@@ -1,5 +1,6 @@
 import ProjectPage from "./ProjectPage";
 import CVPage from "./CVPage";
+import LogPage from "./LogPage";
 import { availablePages } from "../data";
 
 type RenderPageProps = {
@@ -11,6 +12,7 @@ const RenderPage: React.FC<RenderPageProps> = ({ currentPage }) => {
       {currentPage === availablePages.PROJECTS && <ProjectPage />}
       {currentPage === availablePages.CV && <CVPage />}
       {currentPage === availablePages.ABOUT && <p>coming soon</p>}
+      {currentPage === availablePages.LOG && <LogPage />}
     </>
   );
 };
