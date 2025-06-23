@@ -17,7 +17,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   gitHubLink,
 }) => {
   const isWideCard: boolean = demoVids.length >= 2;
-  const cardWidth = isWideCard ? " w-12/12" : " w-[49%]";
+  const cardWidth = isWideCard ? " md:w-full" : " md:w-[49%]";
 
   const handleClick = () => {
     // Could add click analytics here??
@@ -31,15 +31,17 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         cardWidth
       }
     >
-      <div className="flex w-full h-[8vh] justify-between items-center pl-10 pr-5">
+      <div className="flex w-full h-[8vh] justify-between items-center pl-3 md:pl-10 pr-5">
         <ProjectTitle title={title} />
-        <div className="flex flex-col-reverse flex-wrap-reverse gap-x-2 gap-y-0.5 h-[4em] w-fit">
+        <div className="hidden md:flex flex-col-reverse flex-wrap-reverse gap-x-2 gap-y-0.5 h-[4em] w-fit">
           {topicTags.map((item, id) => {
             return <Tag tagName={item} key={id} />;
           })}
         </div>
       </div>
-      <div className="flex max-h-[40vh] justify-evenly gap-x-2 pl-2 pr-4">
+
+      {/* Desktop View */}
+      <div className="hidden md:flex max-h-[40vh] justify-evenly gap-x-2 pl-2 pr-4">
         {demoVids.map((link, id) => {
           return (
             <img
@@ -51,7 +53,21 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           );
         })}
       </div>
-      <p className="text-xl/tight w-10/12 h-1/6 pt-2 pb-5">{description}</p>
+
+      {/* Mobile View */}
+      <div className="md:hidden flex max-h-[60vh] max-w-[80vw] overflow-x-auto snap-x snap-mandatory">
+        {demoVids.map((link, id) => (
+          <img
+            src={link}
+            className="object-contain snap-center"
+            key={id}
+            alt={`Demo Gif #${id}`}
+          />
+        ))}
+      </div>
+      <p className="text-md md:text-xl leading-tight w-10/12 overflow-hidden pb-5 pt-2">
+        <span className="line-clamp-2 md:line-clamp-none">{description}</span>
+      </p>
     </div>
   );
 };

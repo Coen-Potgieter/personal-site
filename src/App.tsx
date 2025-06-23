@@ -14,7 +14,7 @@ function App() {
     setCurrentPage(newPage);
   }
 
-  const sidePanelWidth = 10;
+  const sidePanelWidth = 15;
 
   return (
     <ThemeProvider>
@@ -27,12 +27,7 @@ function App() {
           />
         </div>
 
-        <div
-          className="flex-1 bg-my-white1 dark:bg-my-black1"
-          style={{
-            marginLeft: `${sidePanelWidth * 0.5}vw`,
-          }}
-        >
+        <div className="flex-1 bg-my-white1 dark:bg-my-black1 md:ml-30">
           <RenderPage currentPage={currentPage} />
         </div>
       </div>

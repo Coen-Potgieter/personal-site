@@ -9,7 +9,7 @@ const ProjectPage: React.FC = () => {
         marginTop: "10vh",
       }}
     >
-      <div className="flex flex-wrap w-10/12 justify-center items-center gap-y-10 gap-x-5">
+      <div className="flex flex-wrap w-10/12 justify-center items-center gap-y-5 md:gap-y-10 gap-x-5">
         {PROJECT_DATA.map((item) => {
           return <ProjectCard {...item} key={item.title} />;
         })}

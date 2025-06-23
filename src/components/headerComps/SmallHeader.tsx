@@ -31,7 +31,7 @@ const BigHeader: React.FC<BigHeaderProps> = () => {
   };
   return (
     <div className="md:hidden fixed flex flex-row h-[6vh] w-screen px-4 bg-my-black2 border-b-1 border-white/30 items-center justify-between">
-      <div className="flex">
+      <div className="flex gap-x-2">
         <LogoSVG size={30} className="text-my-green1" />
         <h1>Coen Potgieter</h1>
       </div>
