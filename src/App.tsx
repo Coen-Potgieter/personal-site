@@ -14,16 +14,13 @@ function App() {
     setCurrentPage(newPage);
   }
 
-  let headerHeight = 8;
   const sidePanelWidth = 10;
 
-  if (currentPage === availablePages.CV) headerHeight = 0;
   return (
     <ThemeProvider>
       <div className="flex flex-col h-screen bg-my-white1 dark:bg-my-black1 font-tinos">
         <div className="fixed top-0 left-0 right-0 z-50">
           <Header
-            height={headerHeight}
             width={sidePanelWidth}
             currentPage={currentPage}
             onPageChange={handleChangePage}
@@ -31,9 +28,8 @@ function App() {
         </div>
 
         <div
-          className="flex-1 + mainPaddingStyle bg-my-white1 dark:bg-my-black1"
+          className="flex-1 bg-my-white1 dark:bg-my-black1"
           style={{
-            marginTop: `${headerHeight * 1.2}vh`,
             marginLeft: `${sidePanelWidth * 0.5}vw`,
           }}
         >

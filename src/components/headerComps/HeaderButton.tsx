@@ -1,4 +1,4 @@
-import DotSVG from "../assets/DotSVG";
+import DotSVG from "../../assets/DotSVG";
 type HeaderButtonProps = {
   text: string;
   pageId: string;

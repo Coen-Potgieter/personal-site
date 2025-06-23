@@ -3,7 +3,12 @@ import { PROJECT_DATA } from "../data";
 
 const ProjectPage: React.FC = () => {
   return (
-    <div className="flex w-full h-full justify-center pb-[50vh]">
+    <div
+      className="flex w-full h-full justify-center pb-[50vh]"
+      style={{
+        marginTop: "10vh",
+      }}
+    >
       <div className="flex flex-wrap w-10/12 justify-center items-center gap-y-10 gap-x-5">
         {PROJECT_DATA.map((item) => {
           return <ProjectCard {...item} key={item.title} />;

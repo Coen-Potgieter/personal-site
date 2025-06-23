@@ -1,9 +1,10 @@
 type CVPageType = {};
 const CVPage: React.FC<CVPageType> = () => {
   return (
-    <div className="flex justify-center items-center h-screen w-full dark:invert dark:hue-rotate-180">
+    <div className="w-full dark:invert dark:hue-rotate-180">
       <iframe
-        className="w-full h-full border-none"
+        className="w-full border-none"
+        height={1600}
         src="https://coen-potgieter.github.io/CV/"
         title="My CV"
       />
