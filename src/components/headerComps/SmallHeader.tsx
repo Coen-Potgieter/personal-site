@@ -2,14 +2,14 @@ import LogoSVG from "../../assets/LogoSVG";
 import GitHubSVG from "../../assets/GitHubSVG";
 import LinkedInSVG from "../../assets/LinkedInSVG";
 import { useState } from "react";
-import { availablePages } from "../../data";
+// import { availablePages } from "../../data";
 import HamburgerButton from "./HamburgerButton";
 type BigHeaderProps = {
   currentPage: string;
   onPageChange: (newPage: string) => void;
 };
 
-const BigHeader: React.FC<BigHeaderProps> = ({ currentPage, onPageChange }) => {
+const BigHeader: React.FC<BigHeaderProps> = () => {
   const [menuIsOpen, setMenuIsOpen] = useState<boolean>(false);
   const handleMenuOpen = () => {
     setMenuIsOpen((prevState) => !prevState);
