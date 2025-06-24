@@ -2,6 +2,11 @@ import Tag from "./Tag";
 import ProjectTitle from "./ProjectTitle";
 import DemoVidCarousel from "./mobileComps/demoVidCarousel";
 
+// TODO:    1. for mobile, when clicked it is highlighted with hover animation. Take this away
+//          2. Titles Look a lil weird on mobile
+//          3. Add Go to github button on tilte cards for mobile to indicate its a link
+//          4. For mobile, make functional: This means add pages when hamburger button is clicked, and all that jazz
+
 type ProjectCardProps = {
   title: string;
   topicTags: string[];
