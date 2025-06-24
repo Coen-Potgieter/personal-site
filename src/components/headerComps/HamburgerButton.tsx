@@ -1,41 +1,40 @@
-type HamburgerButtonProps = {
-  isOpen: boolean;
-  onClick: () => void;
-};
+import { useState } from "react";
 
-const HamburgerButton: React.FC<HamburgerButtonProps> = ({
-  isOpen,
-  onClick,
-}) => {
+const HamburgerButton: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <button
-      className="relative w-10 h-10 focus:outline-none group"
-      onClick={onClick}
+      onClick={toggleMenu}
+      className="relative w-fit h-fit bg-transparent border-none rounded-md"
+      aria-label={isOpen ? "Close menu" : "Open menu"}
     >
-      {/* Top line */}
-      <span
-        className={`block absolute h-0.5 w-6 bg-current transform transition duration-500 ease-in-out ${
-          isOpen
-            ? "rotate-45 translate-y-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
-            : "top-3 left-2"
-        }`}
-      ></span>
+      <div className="w-6 h-6 relative">
+        {/* Top line */}
+        <span
+          className={`absolute left-0 w-full h-[7%] bg-black dark:bg-white transition-all duration-200 ease-in-out transform origin-center rounded-lg ${
+            isOpen ? "top-[45%] rotate-45" : "top-[20%]"
+          }`}
+        />
 
-      {/* Middle line */}
-      <span
-        className={`block absolute h-0.5 w-6 bg-current transform transition duration-500 ease-in-out ${
-          isOpen ? "opacity-0" : "opacity-100 top-1/2 left-2 -translate-y-1/2"
-        }`}
-      ></span>
+        {/* Middle line */}
+        <span
+          className={`absolute left-0 w-full top-[50%] h-[7%] bg-black dark:bg-white transition-all duration-200 ease-in-out rounded-lg ${
+            isOpen ? "opacity-0 scale-0" : "opacity-100 scale-100"
+          }`}
+        />
 
-      {/* Bottom line */}
-      <span
-        className={`block absolute h-0.5 w-6 bg-current transform transition duration-500 ease-in-out ${
-          isOpen
-            ? "-rotate-45 translate-y-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
-            : "bottom-3 left-2"
-        }`}
-      ></span>
+        {/* Bottom line */}
+        <span
+          className={`absolute left-0 w-full h-[7%] bg-black dark:bg-white transition-all duration-200 ease-in-out transform origin-center rounded-lg ${
+            isOpen ? "top-[45%] -rotate-45" : "top-[80%]"
+          }`}
+        />
+      </div>
     </button>
   );
 };

@@ -1,5 +1,6 @@
 import Tag from "./Tag";
 import ProjectTitle from "./ProjectTitle";
+import DemoVidCarousel from "./mobileComps/demoVidCarousel";
 
 type ProjectCardProps = {
   title: string;
@@ -23,6 +24,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
     // Could add click analytics here??
     window.open(gitHubLink, "_blank", "noopener,noreferrer");
   };
+
   return (
     <div
       onClick={handleClick}
@@ -31,7 +33,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         cardWidth
       }
     >
-      <div className="flex w-full h-[8vh] justify-between items-center pl-3 md:pl-10 pr-5">
+      <div className="flex w-full md:h-[8vh] h-fit justify-between items-center px-3 md:pl-10 md:pr-5">
         <ProjectTitle title={title} />
         <div className="hidden md:flex flex-col-reverse flex-wrap-reverse gap-x-2 gap-y-0.5 h-[4em] w-fit">
           {topicTags.map((item, id) => {
@@ -55,16 +57,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       </div>
 
       {/* Mobile View */}
-      <div className="md:hidden flex max-h-[60vh] max-w-[80vw] overflow-x-auto snap-x snap-mandatory">
-        {demoVids.map((link, id) => (
-          <img
-            src={link}
-            className="object-contain snap-center"
-            key={id}
-            alt={`Demo Gif #${id}`}
-          />
-        ))}
-      </div>
+      <DemoVidCarousel demoVids={demoVids} />
       <p className="text-md md:text-xl leading-tight w-10/12 overflow-hidden pb-5 pt-2">
         <span className="line-clamp-2 md:line-clamp-none">{description}</span>
       </p>

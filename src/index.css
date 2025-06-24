@@ -2,6 +2,11 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+@utility scrollbar-hidden {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
 @theme {
   --color-my-white1: #fdf9ee;
   --color-my-white2: #fdf6e3;

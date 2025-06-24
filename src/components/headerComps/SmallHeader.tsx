@@ -1,19 +1,16 @@
 import LogoSVG from "../../assets/LogoSVG";
 import GitHubSVG from "../../assets/GitHubSVG";
 import LinkedInSVG from "../../assets/LinkedInSVG";
-import { useState } from "react";
 // import { availablePages } from "../../data";
 import HamburgerButton from "./HamburgerButton";
+import MobileThemeToggleButton from "./MobileThemeToggleButton";
+
 type BigHeaderProps = {
   currentPage: string;
   onPageChange: (newPage: string) => void;
 };
 
 const BigHeader: React.FC<BigHeaderProps> = () => {
-  const [menuIsOpen, setMenuIsOpen] = useState<boolean>(false);
-  const handleMenuOpen = () => {
-    setMenuIsOpen((prevState) => !prevState);
-  };
   const handleProfileClick = (platform: string) => {
     if (platform === "github") {
       window.open(
@@ -30,18 +27,22 @@ const BigHeader: React.FC<BigHeaderProps> = () => {
     }
   };
   return (
-    <div className="md:hidden fixed flex flex-row h-[6vh] w-screen px-4 bg-my-black2 border-b-1 border-white/30 items-center justify-between">
+    <div className="md:hidden fixed flex flex-row h-[6vh] w-screen pl-4 pr-2 bg-my-white2 dark:bg-my-black2 border-b-1 border-black/40 dark:border-white/30 items-center justify-between">
       <div className="flex gap-x-2">
-        <LogoSVG size={30} className="text-my-green1" />
-        <h1>Coen Potgieter</h1>
+        <LogoSVG size={30} className="text-my-orange1 dark:text-my-green1" />
+        <div className="flex">
+          <h1 className="text-my-orange1 dark:text-my-green1">Coen</h1>
+          <h1 className="font-bold">Potgieter</h1>
+        </div>
       </div>
-      <div className="flex flex-row items-center gap-2 mr-">
-        <HamburgerButton isOpen={menuIsOpen} onClick={handleMenuOpen} />
+      <div className="flex flex-row items-center gap-2">
+        <HamburgerButton />
+        <MobileThemeToggleButton />
         <button onClick={() => handleProfileClick("github")}>
-          <GitHubSVG size={25} />
+          <GitHubSVG size={20} />
         </button>
         <button onClick={() => handleProfileClick("linkedin")}>
-          <LinkedInSVG size={25} />
+          <LinkedInSVG size={20} />
         </button>
       </div>
     </div>
