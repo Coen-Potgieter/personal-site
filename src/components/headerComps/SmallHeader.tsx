@@ -6,11 +6,10 @@ import HamburgerButton from "./HamburgerButton";
 import MobileThemeToggleButton from "./MobileThemeToggleButton";
 
 type SmallHeaderProps = {
-  currentPage: string;
   onPageChange: (newPage: string) => void;
 };
 
-const SmallHeader: React.FC<SmallHeaderProps> = () => {
+const SmallHeader: React.FC<SmallHeaderProps> = ({ onPageChange }) => {
   const handleProfileClick = (platform: string) => {
     if (platform === "github") {
       window.open(

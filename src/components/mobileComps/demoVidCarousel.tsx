@@ -20,7 +20,7 @@ const DemoVidCarousel: React.FC<DemoVidCarouselProps> = ({ demoVids }) => {
   const noIndicatorDots = demoVids.length <= 1;
 
   return (
-    <div className="md:hidden">
+    <div className="md:hidden pt-3">
       <div
         ref={scrollRef}
         onScroll={handleScroll}
