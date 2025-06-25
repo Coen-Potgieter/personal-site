@@ -14,7 +14,6 @@ const RenderPage: React.FC<RenderPageProps> = ({ currentPage }) => {
       {currentPage === availablePages.CV && <CVPage />}
       {currentPage === availablePages.ABOUT && <p>coming soon</p>}
       {currentPage === availablePages.LOG && <LogPage />}
-      {currentPage === availablePages.MOBILE_MODAL && <MobileModal />}
     </>
   );
 };

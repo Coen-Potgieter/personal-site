@@ -9,7 +9,7 @@ type SmallHeaderProps = {
   onPageChange: (newPage: string) => void;
 };
 
-const SmallHeader: React.FC<SmallHeaderProps> = ({ onPageChange }) => {
+const SmallHeader: React.FC<SmallHeaderProps> = () => {
   const handleProfileClick = (platform: string) => {
     if (platform === "github") {
       window.open(

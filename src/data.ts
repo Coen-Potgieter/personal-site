@@ -32,7 +32,6 @@ export const availablePages = {
   ABOUT: "about",
   CV: "cv",
   LOG: "log",
-  MOBILE_MODAL: "mobile modal",
 };
 
 export const PROJECT_DATA = [

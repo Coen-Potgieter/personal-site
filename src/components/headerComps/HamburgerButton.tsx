@@ -1,8 +1,6 @@
 import { useState } from "react";
 import MobileModal from "../MobileModal";
-type HamburgerButtonProps = {
-  onPageChange: (newPage: string) => void;
-};
+type HamburgerButtonProps = {};
 const HamburgerButton: React.FC<HamburgerButtonProps> = () => {
   const [isOpen, setIsOpen] = useState(false);
 
