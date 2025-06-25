@@ -5,12 +5,12 @@ import LinkedInSVG from "../../assets/LinkedInSVG";
 import HamburgerButton from "./HamburgerButton";
 import MobileThemeToggleButton from "./MobileThemeToggleButton";
 
-type BigHeaderProps = {
+type SmallHeaderProps = {
   currentPage: string;
   onPageChange: (newPage: string) => void;
 };
 
-const BigHeader: React.FC<BigHeaderProps> = () => {
+const SmallHeader: React.FC<SmallHeaderProps> = () => {
   const handleProfileClick = (platform: string) => {
     if (platform === "github") {
       window.open(
@@ -27,7 +27,7 @@ const BigHeader: React.FC<BigHeaderProps> = () => {
     }
   };
   return (
-    <div className="md:hidden fixed flex flex-row h-[6vh] w-screen pl-4 pr-2 bg-my-white2 dark:bg-my-black2 border-b-1 border-black/40 dark:border-white/30 items-center justify-between">
+    <div className="md:hidden z-30 fixed flex flex-row h-[6vh] w-screen pl-4 pr-2 bg-my-white2 dark:bg-my-black2 border-b-1 border-black/40 dark:border-white/30 items-center justify-between">
       <div className="flex gap-x-2">
         <LogoSVG size={30} className="text-my-orange1 dark:text-my-green1" />
         <div className="flex">
@@ -49,4 +49,4 @@ const BigHeader: React.FC<BigHeaderProps> = () => {
   );
 };
 
-export default BigHeader;
+export default SmallHeader;

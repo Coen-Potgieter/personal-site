@@ -1,20 +1,13 @@
 import BigHeader from "./headerComps/BigHeader";
 import SmallHeader from "./headerComps/SmallHeader";
-import SideBar from "./headerComps/SideBar";
 
 type HeaderProps = {
-  width: number;
   currentPage: string;
   onPageChange: (newPage: string) => void;
 };
-const Header: React.FC<HeaderProps> = ({
-  width,
-  currentPage,
-  onPageChange,
-}) => {
+const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => {
   return (
-    <div className="flex justify-start w-full bg-transparent text-black dark:text-white text-xl">
-      <SideBar width={width} />
+    <div className="fixed top-0 left-0 right-0 z-40 text-black dark:text-white text-xl">
       <BigHeader currentPage={currentPage} onPageChange={onPageChange} />
       <SmallHeader currentPage={currentPage} onPageChange={onPageChange} />
     </div>

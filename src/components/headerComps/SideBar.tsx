@@ -26,7 +26,7 @@ const SideBar: React.FC<SideBarProps> = ({ width }) => {
 
   return (
     <div
-      className="hidden md:flex flex-col gap-y-3 w-fit h-screen justify-start bg-my-white1 dark:bg-my-black1 px-5 pt-5 items-center text-3xl font-bold"
+      className="fixed top-0 left-0 right-0 z-50 hidden md:flex text-black dark:text-white flex-col gap-y-3 w-fit h-screen justify-start bg-my-white1 dark:bg-my-black1 px-5 pt-5 items-center text-3xl font-bold"
       style={{ width: `${width}vw` }}
     >
       <div className="flex flex-col items-center">
