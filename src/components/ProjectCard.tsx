@@ -1,6 +1,6 @@
 import Tag from "./Tag";
 import ProjectTitle from "./ProjectTitle";
-import DemoVidCarousel from "./mobileComps/demoVidCarousel";
+import DemoVidCarousel from "./mobileComps/DemoVidCarousel";
 
 // TODO:
 //          4. For mobile, make functional: This means add pages when hamburger button is clicked, and all that jazz

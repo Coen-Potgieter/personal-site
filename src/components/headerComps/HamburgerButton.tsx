@@ -1,7 +1,14 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import MobileModal from "../MobileModal";
-type HamburgerButtonProps = {};
-const HamburgerButton: React.FC<HamburgerButtonProps> = () => {
+
+type HamburgerButtonProps = {
+  currentPage: string;
+  onPageChange: (newPage: string) => void;
+};
+const HamburgerButton: React.FC<HamburgerButtonProps> = ({
+  currentPage,
+  onPageChange,
+}) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -10,7 +17,14 @@ const HamburgerButton: React.FC<HamburgerButtonProps> = () => {
 
   return (
     <>
-      {isOpen && <MobileModal isOpen={isOpen} />}
+      {isOpen && (
+        <MobileModal
+          currentPage={currentPage}
+          onPageChange={onPageChange}
+          isOpen={isOpen}
+          closeModal={toggleMenu}
+        />
+      )}
       <button
         onClick={toggleMenu}
         className="relative w-fit h-fit bg-transparent border-none rounded-md"

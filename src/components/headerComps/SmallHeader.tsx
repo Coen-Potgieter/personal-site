@@ -1,15 +1,18 @@
 import LogoSVG from "../../assets/LogoSVG";
 import GitHubSVG from "../../assets/GitHubSVG";
 import LinkedInSVG from "../../assets/LinkedInSVG";
-// import { availablePages } from "../../data";
 import HamburgerButton from "./HamburgerButton";
 import MobileThemeToggleButton from "./MobileThemeToggleButton";
 
 type SmallHeaderProps = {
+  currentPage: string;
   onPageChange: (newPage: string) => void;
 };
 
-const SmallHeader: React.FC<SmallHeaderProps> = () => {
+const SmallHeader: React.FC<SmallHeaderProps> = ({
+  currentPage,
+  onPageChange,
+}) => {
   const handleProfileClick = (platform: string) => {
     if (platform === "github") {
       window.open(
@@ -35,7 +38,10 @@ const SmallHeader: React.FC<SmallHeaderProps> = () => {
         </div>
       </div>
       <div className="flex flex-row items-center gap-2">
-        <HamburgerButton />
+        <HamburgerButton
+          currentPage={currentPage}
+          onPageChange={onPageChange}
+        />
         <MobileThemeToggleButton />
         <button onClick={() => handleProfileClick("github")}>
           <GitHubSVG size={20} />
