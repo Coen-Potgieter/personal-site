@@ -20,10 +20,12 @@ function App() {
   return (
     <ThemeProvider>
       <div className="flex flex-col h-screen bg-my-white1 dark:bg-my-black1 font-tinos">
-        <SideBar width={sidePanelWidth} />
+        {currentPage != availablePages.ABOUT && (
+          <SideBar width={sidePanelWidth} />
+        )}
         <Header currentPage={currentPage} onPageChange={handleChangePage} />
 
-        <div className="flex-1 bg-my-white1 dark:bg-my-black1 md:ml-30 z-20">
+        <div className="flex-1 bg-my-white1 dark:bg-my-black1 z-20">
           <RenderPage currentPage={currentPage} />
         </div>
       </div>

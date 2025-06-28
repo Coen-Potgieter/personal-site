@@ -43,14 +43,14 @@ const SideBar: React.FC<SideBarProps> = ({ width }) => {
       <div className="flex gap-x-3">
         <button
           onClick={() => handleProfileClick("github")}
-          className="cursor-pointer hover:text-my-green1 transition duration-50 ease-in-out hover:scale-120"
+          className="cursor-pointer hover:text-my-green1 transition duration-100 ease-in-out hover:scale-120"
         >
           <GitHubSVG size={25} />
         </button>
 
         <button
           onClick={() => handleProfileClick("linkedin")}
-          className="cursor-pointer hover:text-linkedin-highlight transition duration-50 ease-in-out hover:scale-120"
+          className="cursor-pointer hover:text-linkedin-highlight transition duration-100 ease-in-out hover:scale-120"
         >
           <LinkedInSVG size={25} />
         </button>

@@ -36,7 +36,7 @@ md:hover:dark:bg-my-black2 md:hover:shadow-2xl` + cardWidth
     >
       <div className="flex w-full h-fit md:h-[8vh] justify-between items-center px-3 md:pl-10 md:pr-5">
         <ProjectTitle title={title} />
-        <div className="hidden md:flex flex-col-reverse flex-wrap-reverse gap-x-2 gap-y-0.5 h-[4em] w-fit">
+        <div className="hidden md:grid grid-rows-2 grid-flow-col gap-x-1">
           {topicTags.map((item, id) => {
             return <Tag tagName={item} key={id} />;
           })}

@@ -4,7 +4,7 @@ import { PROJECT_DATA } from "../../../data";
 const ProjectPage: React.FC = () => {
   return (
     <div
-      className="flex w-full h-full justify-center pb-[50vh]"
+      className="flex w-full h-full justify-center pb-[50vh] md:ml-30"
       style={{
         marginTop: "10vh",
       }}
