@@ -1,5 +1,5 @@
-import BigHeader from "./headerComps/BigHeader";
-import SmallHeader from "./headerComps/SmallHeader";
+import DesktopHeader from "./headerComps/desktop/DesktopHeader";
+import MobileHeader from "./headerComps/mobile/MobileHeader";
 
 type HeaderProps = {
   currentPage: string;
@@ -8,8 +8,8 @@ type HeaderProps = {
 const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => {
   return (
     <div className="fixed top-0 left-0 right-0 z-40 text-black dark:text-white text-xl">
-      <BigHeader currentPage={currentPage} onPageChange={onPageChange} />
-      <SmallHeader currentPage={currentPage} onPageChange={onPageChange} />
+      <DesktopHeader currentPage={currentPage} onPageChange={onPageChange} />
+      <MobileHeader currentPage={currentPage} onPageChange={onPageChange} />
     </div>
   );
 };

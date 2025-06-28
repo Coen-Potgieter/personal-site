@@ -1,4 +1,4 @@
-import { tagColours } from "../data";
+import { tagColours } from "../../../../data";
 type TagProp = {
   tagName: string;
 };

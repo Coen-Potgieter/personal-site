@@ -1,4 +1,4 @@
-import GitHubSVG from "../assets/GitHubSVG";
+import GitHubSVG from "../../../assets/GitHubSVG";
 
 type ProjectTitleProps = {
   title: string;

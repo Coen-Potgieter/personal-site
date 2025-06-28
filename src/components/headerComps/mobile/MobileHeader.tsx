@@ -1,15 +1,15 @@
-import LogoSVG from "../../assets/LogoSVG";
-import GitHubSVG from "../../assets/GitHubSVG";
-import LinkedInSVG from "../../assets/LinkedInSVG";
+import LogoSVG from "../../../assets/LogoSVG";
+import GitHubSVG from "../../../assets/GitHubSVG";
+import LinkedInSVG from "../../../assets/LinkedInSVG";
 import HamburgerButton from "./HamburgerButton";
 import MobileThemeToggleButton from "./MobileThemeToggleButton";
 
-type SmallHeaderProps = {
+type MobileHeaderProps = {
   currentPage: string;
   onPageChange: (newPage: string) => void;
 };
 
-const SmallHeader: React.FC<SmallHeaderProps> = ({
+const MobileHeader: React.FC<MobileHeaderProps> = ({
   currentPage,
   onPageChange,
 }) => {
@@ -54,4 +54,4 @@ const SmallHeader: React.FC<SmallHeaderProps> = ({
   );
 };
 
-export default SmallHeader;
+export default MobileHeader;

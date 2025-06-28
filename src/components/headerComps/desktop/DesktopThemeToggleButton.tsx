@@ -1,6 +1,6 @@
-import { useTheme } from "../../context/theme-context";
+import { useTheme } from "../../../context/theme-context";
 
-const ThemeToggleButton = () => {
+const DesktopThemeToggleButton = () => {
   const { theme, toggleTheme } = useTheme();
   const activeStyle = "text-black/20";
 
@@ -15,4 +15,4 @@ const ThemeToggleButton = () => {
   );
 };
 
-export default ThemeToggleButton;
+export default DesktopThemeToggleButton;

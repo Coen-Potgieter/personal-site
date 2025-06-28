@@ -3,7 +3,7 @@ import Header from "./components/Header";
 import RenderPage from "./components/RenderPage";
 import { availablePages } from "./data";
 import { ThemeProvider } from "./context/theme-context";
-import SideBar from "./components/headerComps/SideBar";
+import SideBar from "./components/headerComps/desktop/SideBar";
 
 function App() {
   const [currentPage, setCurrentPage] = useState<string>(

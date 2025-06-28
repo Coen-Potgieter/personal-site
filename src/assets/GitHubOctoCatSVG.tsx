@@ -1,4 +1,7 @@
-const GitHubOctoCatSVG: React.FC = () => {
+type GitHubOctoCatSVGProps = {
+  size: number;
+};
+const GitHubOctoCatSVG: React.FC<GitHubOctoCatSVGProps> = ({ size }) => {
   return (
     <svg
       viewBox="-1.65 0 259.3 259.3"
@@ -6,6 +9,8 @@ const GitHubOctoCatSVG: React.FC = () => {
       xmlnsXlink="http://www.w3.org/1999/xlink"
       preserveAspectRatio="xMidYMid"
       fill="#000000"
+      width={size}
+      height={size}
     >
       <g id="SVGRepo_bgCarrier" strokeWidth={0} />
       <g

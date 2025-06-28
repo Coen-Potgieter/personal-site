@@ -1,10 +1,12 @@
-import DotSVG from "../../assets/DotSVG";
+import DotSVG from "../../../assets/DotSVG";
+
 type HeaderButtonProps = {
   text: string;
   pageId: string;
   currentPage: string;
   onPageChange: (newPage: string) => void;
 };
+
 const HeaderButton: React.FC<HeaderButtonProps> = ({
   text,
   pageId,

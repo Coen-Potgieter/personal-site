@@ -1,7 +1,7 @@
-import GitHubSVG from "../../assets/GitHubSVG";
-import LinkedInSVG from "../../assets/LinkedInSVG";
-import { aboutMe } from "../../data";
-import LogoSVG from "../../assets/LogoSVG";
+import GitHubSVG from "../../../assets/GitHubSVG";
+import LinkedInSVG from "../../../assets/LinkedInSVG";
+import { aboutMe } from "../../../data";
+import LogoSVG from "../../../assets/LogoSVG";
 
 type SideBarProps = {
   width: number;

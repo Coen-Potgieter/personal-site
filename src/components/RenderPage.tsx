@@ -1,6 +1,6 @@
-import ProjectPage from "./ProjectPage";
-import CVPage from "./CVPage";
-import LogPage from "./LogPage";
+import ProjectPage from "./pages/project/ProjectPage";
+import CVPage from "./pages/cv/CVPage";
+import LogPage from "./pages/log/LogPage";
 import { availablePages } from "../data";
 
 type RenderPageProps = {

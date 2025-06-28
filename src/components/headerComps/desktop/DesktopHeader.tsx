@@ -1,12 +1,16 @@
-import { availablePages } from "../../data";
+import { availablePages } from "../../../data";
 import HeaderButton from "./HeaderButton";
-import ThemeToggleButton from "./ThemeToggleButton";
-type BigHeaderProps = {
+import DesktopThemeToggleButton from "./DesktopThemeToggleButton";
+
+type DesktopHeaderProps = {
   currentPage: string;
   onPageChange: (newPage: string) => void;
 };
 
-const BigHeader: React.FC<BigHeaderProps> = ({ currentPage, onPageChange }) => {
+const DesktopHeader: React.FC<DesktopHeaderProps> = ({
+  currentPage,
+  onPageChange,
+}) => {
   return (
     <div className="hidden md:flex w-full bg-my-white1/10 dark:bg-my-black1/10 backdrop-blur-md h-fit">
       <div className="mx-auto flex justify-center h-fit">
@@ -37,9 +41,9 @@ const BigHeader: React.FC<BigHeaderProps> = ({ currentPage, onPageChange }) => {
           />
         </div>
       </div>
-      <ThemeToggleButton />
+      <DesktopThemeToggleButton />
     </div>
   );
 };
 
-export default BigHeader;
+export default DesktopHeader;

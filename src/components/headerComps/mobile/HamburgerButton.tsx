@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import MobileModal from "../MobileModal";
+import MobileModal from "./MobileModal";
 
 type HamburgerButtonProps = {
   currentPage: string;
