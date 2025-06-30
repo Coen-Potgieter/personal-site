@@ -11,7 +11,7 @@ const PageNavButton: React.FC<PageNavButtonProps> = ({ label, isActive }) => {
     ? " text-my-light-text1"
     : " text-my-light-text2 group-hover:text-my-light-text1";
   return (
-    <button className="flex gap-x-2 w-fit justify-start items-center group">
+    <button className="flex gap-x-2 py-1.5 w-fit justify-start items-center group">
       <span
         className={
           `h-1 transition-all ease-in-out duration-100` + dynamicSpanStyle
