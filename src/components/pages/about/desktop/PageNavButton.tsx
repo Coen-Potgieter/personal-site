@@ -5,13 +5,13 @@ type PageNavButtonProps = {
 
 const PageNavButton: React.FC<PageNavButtonProps> = ({ label, isActive }) => {
   const dynamicSpanStyle = isActive
-    ? " bg-my-light-text1 w-24"
-    : " w-12 bg-my-light-text2 group-hover:bg-my-light-text1 group-hover:w-24";
+    ? " bg-lightmode-text-col1 dark:bg-darkmode-text-col1 w-24"
+    : " bg-lightmode-text-col2 w-12 dark:bg-darkmode-text-col2 group-hover:bg-lightmode-text-col1 dark:group-hover:bg-darkmode-text-col1 group-hover:w-24";
   const dynamicTextStyle = isActive
-    ? " text-my-light-text1"
-    : " text-my-light-text2 group-hover:text-my-light-text1";
+    ? " dark:text-darkmode-text-col1 text-lightmode-text-col1"
+    : " text-lightmode-text-col2 dark:text-darkmode-text-col2 group-hover:text-lightmode-text-col1 dark:group-hover:text-darkmode-text-col1";
   return (
-    <button className="flex gap-x-2 py-1.5 w-fit justify-start items-center group">
+    <button className="flex gap-x-2 py-1.5 w-4/12 justify-start items-center group cursor-pointer">
       <span
         className={
           `h-1 transition-all ease-in-out duration-100` + dynamicSpanStyle
