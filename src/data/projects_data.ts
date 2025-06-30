@@ -12,28 +12,6 @@ export const tagColours = new Map<string, string>([
   ["Autoencoders", "#9B59B6"], // Violet (latent space, compression)
 ]);
 
-export const monthlyMusic = {
-  2025: {
-    june: [{ artist: "Little Simz", album: "Lotus" }],
-  },
-  2024: {
-    june: [{ artist: "Little Simz", album: "Lotus" }],
-  },
-};
-
-export const aboutMe = {
-  small:
-    "I Am A Final Year Data Engineering Student At Stellenbosch University Looking For A Job",
-  big: "THIS IS LONG BIG TEXT",
-};
-
-export const availablePages = {
-  PROJECTS: "projects",
-  ABOUT: "about",
-  CV: "cv",
-  LOG: "log",
-};
-
 export const PROJECT_DATA = [
   {
     title: "Word Embedding Playground",

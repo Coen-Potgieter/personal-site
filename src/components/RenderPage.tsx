@@ -2,7 +2,7 @@ import ProjectPage from "./pages/project/ProjectPage";
 import CVPage from "./pages/cv/CVPage";
 import LogPage from "./pages/log/LogPage";
 import AboutPage from "./pages/about/AboutPage";
-import { availablePages } from "../data";
+import { availablePages } from "../data/site_data";
 
 type RenderPageProps = {
   currentPage: string;

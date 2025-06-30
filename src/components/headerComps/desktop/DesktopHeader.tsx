@@ -1,4 +1,4 @@
-import { availablePages } from "../../../data";
+import { availablePages } from "../../../data/site_data";
 import HeaderButton from "./HeaderButton";
 import DesktopThemeToggleButton from "./DesktopThemeToggleButton";
 

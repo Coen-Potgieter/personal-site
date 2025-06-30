@@ -1,6 +1,6 @@
 import { createPortal } from "react-dom";
 import { useEffect } from "react";
-import { availablePages } from "../../../data";
+import { availablePages } from "../../../data/site_data";
 import ModalPageButton from "./ModalPageButton";
 import GitHubOctoCatSVG from "../../../assets/GitHubOctoCatSVG";
 import DocumentSVG from "../../../assets/DocumentSVG";

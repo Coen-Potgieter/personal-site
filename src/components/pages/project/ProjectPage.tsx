@@ -1,5 +1,5 @@
 import ProjectCard from "./ProjectCard";
-import { PROJECT_DATA } from "../../../data";
+import { PROJECT_DATA } from "../../../data/projects_data";
 
 const ProjectPage: React.FC = () => {
   return (

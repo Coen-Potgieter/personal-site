@@ -1,4 +1,4 @@
-import { monthlyMusic } from "../../../data";
+import { monthlyMusic } from "../../../data/log_data";
 
 type SongsGridProps = {};
 

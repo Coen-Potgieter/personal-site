@@ -15,25 +15,42 @@ const AboutPage: React.FC<AboutPageProps> = () => {
           <p className="text-my-light-text2">I like coding things</p>
         </div>
         <div className="flex flex-col h-7/12 justify-start items-start">
-          <PageNavButton label="ABOUT" isActive={false} />
-          <PageNavButton label="EXPERIENCE" isActive={true} />
+          <PageNavButton label="ABOUT" isActive={true} />
+          <PageNavButton label="PROJECTS" isActive={false} />
+          <PageNavButton label="LOG" isActive={false} />
         </div>
         <div className="flex flex-col pl-10 text-my-light-text1">
           <GitHubSVG size={30} />
         </div>
       </div>
 
-      <div className="flex flex-col w-[50vw] overflow-y-scroll">
+      <div className="flex flex-col w-[50vw] overflow-y-scroll pr-10">
         <h1 className="text-4xl text-my-light-text1">About</h1>
         <p className="text-lg text-my-light-text2">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dictum
-          mi sit amet lorem dignissim fermentum. Vivamus vitae commodo neque.
-          Mauris semper est augue, non facilisis leo scelerisque vitae. Quisque
-          efficitur dui elit, vel faucibus lorem feugiat in. Nam vitae tortor
-          tortor. Fusce tristique scelerisque nunc nec iaculis. Proin vestibulum
-          ut est a cursus. Quisque molestie metus sed odio molestie placerat.
-          Aenean ac ante sed magna dictum blandit. Quisque pharetra aliquet
-          tincidunt. Phasellus tincidunt sodales velit quis feugiat.{" "}
+          I'm a final-year Data Engineering student with a curiosity that's
+          gotten me tangled in everything from neural networks built from
+          scratch to visual simulations of gravitational chaos.
+        </p>
+        <p className="text-lg text-my-light-text2">
+          I absolutely love building things in code that teaches me new, complex
+          topics. This may include an MLP built from scratch using nothing but
+          numpy, a self playing Flappy Bird, a React application for playing
+          with word embeddings or a simulation of chaotic 3 body systems, I
+          become obsessed and strive to become an expert in that topic.
+        </p>
+        <p className="text-lg text-my-light-text2">
+          Aside from coding I love reading, listening to music and enjoy playing
+          chess from time to time. Right now, I’m completing my degree while
+          cautiously engaging in my own personal projects and interests. My core
+          strengths live somewhere between code, data, and explanation — and I
+          enjoy working across that spectrum.
+        </p>
+        <p className="text-lg text-my-light-text2">
+          This site is mostly a place to log what I’ve built, what I’ve been
+          reading or listening to, and things I’ve learned along the way. It’s
+          not a pitch, but rather my virtual garden. With that said, if you’re
+          looking for someone who’s passionate about their craft and has range
+          then have a look around.
         </p>
       </div>
     </div>

@@ -1,6 +1,6 @@
 import GitHubSVG from "../../../assets/GitHubSVG";
 import LinkedInSVG from "../../../assets/LinkedInSVG";
-import { aboutMe } from "../../../data";
+import { aboutMe } from "../../../data/about_data";
 import LogoSVG from "../../../assets/LogoSVG";
 
 type SideBarProps = {
