@@ -1,19 +1,13 @@
 import GitHubSVG from "../../../assets/GitHubSVG";
 import LinkedInSVG from "../../../assets/LinkedInSVG";
-import { aboutMe } from "../../../data/about_data";
 import LogoSVG from "../../../assets/LogoSVG";
 import { handleProfileClick } from "../../../lib/helper-funcs";
 
-type SideBarProps = {
-  width: number;
-};
+type SideBarProps = {};
 
-const SideBar: React.FC<SideBarProps> = ({ width }) => {
+const SideBar: React.FC<SideBarProps> = () => {
   return (
-    <div
-      className="fixed top-0 left-0 right-0 z-50 hidden md:flex text-black dark:text-white flex-col gap-y-3 w-fit h-screen justify-start bg-my-white1 dark:bg-my-black1 px-5 pt-5 items-center text-3xl font-bold"
-      style={{ width: `${width}vw` }}
-    >
+    <div className="font-tinos fixed top-0 left-0 w-[12vw] right-0 z-50 hidden md:flex text-black dark:text-white flex-col gap-y-3 h-screen justify-start bg-my-white1 dark:bg-my-black1 px-5 pt-5 items-center text-3xl font-bold">
       <div className="flex flex-col items-center">
         <LogoSVG size={50} className="text-my-orange1 dark:text-my-green1" />
         <h1 className="text-my-orange1 dark:text-my-green1 font-normal">
@@ -22,7 +16,8 @@ const SideBar: React.FC<SideBarProps> = ({ width }) => {
         <h1>Potgieter</h1>
 
         <p className="font-space-mono font-normal text-center text-sm pt-2">
-          {aboutMe.small}
+          I Am A Final Year Data Engineering Student At Stellenbosch University
+          Looking For A Job
         </p>
       </div>
       <div className="flex gap-x-3">

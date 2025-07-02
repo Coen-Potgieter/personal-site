@@ -1,8 +1,8 @@
-import GitHubSVG from "../../../assets/GitHubSVG";
-import LinkedInSVG from "../../../assets/LinkedInSVG";
-import GoodReadsSVG from "../../../assets/GoodReadsSVG";
-import PageNavButton from "./desktop/PageNavButton";
-import { handleProfileClick } from "../../../lib/helper-funcs";
+import GitHubSVG from "../assets/GitHubSVG";
+import LinkedInSVG from "../assets/LinkedInSVG";
+import GoodReadsSVG from "../assets/GoodReadsSVG";
+import PageNavButton from "../components/desktop/about_me/PageNavButton";
+import { handleProfileClick } from "../lib/helper-funcs";
 
 type AboutPageProps = {};
 

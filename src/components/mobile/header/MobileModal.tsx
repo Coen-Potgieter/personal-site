@@ -1,24 +1,16 @@
 import { createPortal } from "react-dom";
 import { useEffect } from "react";
-import { availablePages } from "../../../data/site_data";
 import ModalPageButton from "./ModalPageButton";
 import GitHubOctoCatSVG from "../../../assets/GitHubOctoCatSVG";
 import DocumentSVG from "../../../assets/DocumentSVG";
 import LogoSVG from "../../../assets/LogoSVG";
 
 type MobileModalProps = {
-  currentPage: string;
-  onPageChange: (newPage: string) => void;
   isOpen: boolean;
   closeModal: () => void;
 };
 
-const MobileModal: React.FC<MobileModalProps> = ({
-  currentPage,
-  onPageChange,
-  isOpen,
-  closeModal,
-}) => {
+const MobileModal: React.FC<MobileModalProps> = ({ isOpen, closeModal }) => {
   // Prevent body scroll when modal is open
   useEffect(() => {
     if (isOpen) {
@@ -29,9 +21,8 @@ const MobileModal: React.FC<MobileModalProps> = ({
     }
   }, [isOpen]);
 
-  const moveToPage = (newPage: string) => {
+  const moveToPage = () => {
     closeModal();
-    onPageChange(newPage);
   };
 
   if (!isOpen) return null;
@@ -43,23 +34,20 @@ const MobileModal: React.FC<MobileModalProps> = ({
         <div className="flex flex-col gap-4 justify-center items-center h-[60vh] font-tinos">
           {/* Projects Button */}
           <ModalPageButton
-            onTap={() => moveToPage(availablePages.PROJECTS)}
             label="Projects"
-            isCurrentPage={availablePages.PROJECTS === currentPage}
+            endpoint="projects/"
             Icon={<GitHubOctoCatSVG size={40} />}
           />
           {/* CV Button */}
           <ModalPageButton
-            onTap={() => moveToPage(availablePages.CV)}
             label="CV"
-            isCurrentPage={availablePages.CV === currentPage}
+            endpoint="cv/"
             Icon={<DocumentSVG size={35} />}
           />
           {/* About Button */}
           <ModalPageButton
-            onTap={() => moveToPage(availablePages.ABOUT)}
             label="About"
-            isCurrentPage={availablePages.ABOUT === currentPage}
+            endpoint="/"
             Icon={
               <LogoSVG
                 size={35}

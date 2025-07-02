@@ -27,16 +27,21 @@
   --font-space-mono: "Space Mono";
 }
 
+.no-colour-transition {
+  transition: none !important;
+}
+
 /* Transition Animation Colours */
 @layer base {
   *,
   *::before,
   *::after {
-    @apply transition-colors duration-400;
+    @apply transition-colors duration-200;
   }
+
   html,
   body {
-    @apply bg-my-white1 dark:bg-my-black1; /* Or your dark color */
+    @apply bg-my-white1 dark:bg-my-black1;
     min-height: 100vh;
   }
 }

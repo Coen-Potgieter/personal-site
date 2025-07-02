@@ -4,15 +4,9 @@ import LinkedInSVG from "../../../assets/LinkedInSVG";
 import HamburgerButton from "./HamburgerButton";
 import MobileThemeToggleButton from "./MobileThemeToggleButton";
 
-type MobileHeaderProps = {
-  currentPage: string;
-  onPageChange: (newPage: string) => void;
-};
+type MobileHeaderProps = {};
 
-const MobileHeader: React.FC<MobileHeaderProps> = ({
-  currentPage,
-  onPageChange,
-}) => {
+const MobileHeader: React.FC<MobileHeaderProps> = ({}) => {
   const handleProfileClick = (platform: string) => {
     if (platform === "github") {
       window.open(
@@ -38,10 +32,7 @@ const MobileHeader: React.FC<MobileHeaderProps> = ({
         </div>
       </div>
       <div className="flex flex-row items-center gap-2">
-        <HamburgerButton
-          currentPage={currentPage}
-          onPageChange={onPageChange}
-        />
+        <HamburgerButton />
         <MobileThemeToggleButton />
         <button onClick={() => handleProfileClick("github")}>
           <GitHubSVG size={20} />

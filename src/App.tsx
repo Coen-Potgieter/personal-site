@@ -1,32 +1,29 @@
-import { useState } from "react";
-import Header from "./components/Header";
-import RenderPage from "./components/RenderPage";
-import { availablePages } from "./data/site_data";
 import { ThemeProvider } from "./context/theme-context";
-import SideBar from "./components/headerComps/desktop/SideBar";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+import Root from "./pages/Root";
+import ErrorPage from "./pages/ErrorPage";
+import CVPage from "./pages/CVPage";
+import AboutPage from "./pages/AboutPage";
+import ProjectPage from "./components/pages/project/ProjectPage";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Root />,
+    children: [
+      { index: true, element: <AboutPage /> },
+      { path: "projects", element: <ProjectPage /> },
+      { path: "cv", element: <CVPage /> },
+    ],
+    errorElement: <ErrorPage />,
+  },
+]);
 
 function App() {
-  const [currentPage, setCurrentPage] = useState<string>(availablePages.ABOUT);
-
-  function handleChangePage(newPage: string) {
-    if (newPage === currentPage) return;
-    setCurrentPage(newPage);
-  }
-
-  const sidePanelWidth = 15;
-
   return (
     <ThemeProvider>
-      <div className="flex flex-col h-screen bg-my-white1 dark:bg-my-black1 font-tinos">
-        {currentPage != availablePages.ABOUT && (
-          <SideBar width={sidePanelWidth} />
-        )}
-        <Header currentPage={currentPage} onPageChange={handleChangePage} />
-
-        <div className="flex-1 bg-my-white1 dark:bg-my-black1 z-20">
-          <RenderPage currentPage={currentPage} />
-        </div>
-      </div>
+      <RouterProvider router={router} />
     </ThemeProvider>
   );
 }

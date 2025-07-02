@@ -1,30 +1,28 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import MobileModal from "./MobileModal";
+import { useLocation } from "react-router-dom";
 
-type HamburgerButtonProps = {
-  currentPage: string;
-  onPageChange: (newPage: string) => void;
-};
-const HamburgerButton: React.FC<HamburgerButtonProps> = ({
-  currentPage,
-  onPageChange,
-}) => {
+type HamburgerButtonProps = {};
+const HamburgerButton: React.FC<HamburgerButtonProps> = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const location = useLocation();
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
+  // useEffect(() => {
+  //   if (isOpen) {
+  //     document.body.style.overflow = "hidden";
+  //     return () => {
+  //       document.body.style.overflow = "";
+  //     };
+  //   }
+  // }, [isOpen]);
+
   return (
     <>
-      {isOpen && (
-        <MobileModal
-          currentPage={currentPage}
-          onPageChange={onPageChange}
-          isOpen={isOpen}
-          closeModal={toggleMenu}
-        />
-      )}
+      {isOpen && <MobileModal isOpen={isOpen} closeModal={toggleMenu} />}
       <button
         onClick={toggleMenu}
         className="relative w-fit h-fit bg-transparent border-none rounded-md"
