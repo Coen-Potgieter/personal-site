@@ -6,9 +6,7 @@ import { ThemeProvider } from "./context/theme-context";
 import SideBar from "./components/headerComps/desktop/SideBar";
 
 function App() {
-  const [currentPage, setCurrentPage] = useState<string>(
-    availablePages.PROJECTS,
-  );
+  const [currentPage, setCurrentPage] = useState<string>(availablePages.ABOUT);
 
   function handleChangePage(newPage: string) {
     if (newPage === currentPage) return;

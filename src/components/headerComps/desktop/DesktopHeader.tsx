@@ -16,6 +16,12 @@ const DesktopHeader: React.FC<DesktopHeaderProps> = ({
       <div className="mx-auto flex justify-center h-fit">
         <div className="flex justify-center w-fit px-10 gap-x-10 pt-2 h-fit border-b-2 dark:border-white/50 rounded-b-xl">
           <HeaderButton
+            text="About"
+            pageId={availablePages.ABOUT}
+            currentPage={currentPage}
+            onPageChange={onPageChange}
+          />
+          <HeaderButton
             text="Projects"
             pageId={availablePages.PROJECTS}
             currentPage={currentPage}
@@ -24,12 +30,6 @@ const DesktopHeader: React.FC<DesktopHeaderProps> = ({
           <HeaderButton
             text="CV"
             pageId={availablePages.CV}
-            currentPage={currentPage}
-            onPageChange={onPageChange}
-          />
-          <HeaderButton
-            text="About"
-            pageId={availablePages.ABOUT}
             currentPage={currentPage}
             onPageChange={onPageChange}
           />

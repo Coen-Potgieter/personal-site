@@ -1,5 +1,8 @@
 import GitHubSVG from "../../../assets/GitHubSVG";
+import LinkedInSVG from "../../../assets/LinkedInSVG";
+import GoodReadsSVG from "../../../assets/GoodReadsSVG";
 import PageNavButton from "./desktop/PageNavButton";
+import { handleProfileClick } from "../../../lib/helper-funcs";
 
 type AboutPageProps = {};
 
@@ -23,8 +26,25 @@ const AboutPage: React.FC<AboutPageProps> = () => {
           <PageNavButton label="PROJECTS" isActive={false} />
           <PageNavButton label="LOG" isActive={false} />
         </div>
-        <div className="flex flex-row text-lightmode-text-col1 dark:text-darkmode-text-col1 py-5 md:pl-10 md:pt-0">
-          <GitHubSVG size={25} />
+        <div className="flex flex-row text-lightmode-text-col2 gap-x-4 dark:text-darkmode-text-col2 py-5 md:pl-10 md:pt-0">
+          <button
+            onClick={() => handleProfileClick("github")}
+            className="cursor-pointer transition-all duration-100 ease-in-out dark:hover:text-darkmode-text-col1 hover:text-lightmode-text-col1"
+          >
+            <GitHubSVG size={25} />
+          </button>
+          <button
+            onClick={() => handleProfileClick("linkedin")}
+            className="cursor-pointer transition-all duration-100 ease-in-out dark:hover:text-darkmode-text-col1 hover:text-lightmode-text-col1"
+          >
+            <LinkedInSVG size={25} />
+          </button>
+          <button
+            onClick={() => handleProfileClick("goodreads")}
+            className="cursor-pointer transition-all duration-100 ease-in-out dark:hover:text-darkmode-text-col1 hover:text-lightmode-text-col1"
+          >
+            <GoodReadsSVG size={25} />
+          </button>
         </div>
       </div>
 

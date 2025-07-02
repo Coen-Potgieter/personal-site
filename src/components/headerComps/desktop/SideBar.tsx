@@ -2,28 +2,13 @@ import GitHubSVG from "../../../assets/GitHubSVG";
 import LinkedInSVG from "../../../assets/LinkedInSVG";
 import { aboutMe } from "../../../data/about_data";
 import LogoSVG from "../../../assets/LogoSVG";
+import { handleProfileClick } from "../../../lib/helper-funcs";
 
 type SideBarProps = {
   width: number;
 };
 
 const SideBar: React.FC<SideBarProps> = ({ width }) => {
-  const handleProfileClick = (platform: string) => {
-    if (platform === "github") {
-      window.open(
-        "https://github.com/Coen-Potgieter",
-        "_blank",
-        "noopener,noreferrer",
-      );
-    } else if (platform === "linkedin") {
-      window.open(
-        "https://www.linkedin.com/in/coen-potgieter/",
-        "_blank",
-        "noopener,noreferrer",
-      );
-    }
-  };
-
   return (
     <div
       className="fixed top-0 left-0 right-0 z-50 hidden md:flex text-black dark:text-white flex-col gap-y-3 w-fit h-screen justify-start bg-my-white1 dark:bg-my-black1 px-5 pt-5 items-center text-3xl font-bold"

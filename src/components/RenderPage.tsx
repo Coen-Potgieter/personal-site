@@ -11,9 +11,9 @@ type RenderPageProps = {
 const RenderPage: React.FC<RenderPageProps> = ({ currentPage }) => {
   return (
     <>
+      {currentPage === availablePages.ABOUT && <AboutPage />}
       {currentPage === availablePages.PROJECTS && <ProjectPage />}
       {currentPage === availablePages.CV && <CVPage />}
-      {currentPage === availablePages.ABOUT && <AboutPage />}
       {currentPage === availablePages.LOG && <LogPage />}
     </>
   );
