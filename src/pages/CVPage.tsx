@@ -1,13 +1,22 @@
-type CVPageType = {};
-const CVPage: React.FC<CVPageType> = () => {
+import CV from "../assets/cv.pdf";
+
+type CVPageProps = {};
+const CVPage: React.FC<CVPageProps> = () => {
   return (
-    <div className="w-full md:ml-30 dark:invert dark:hue-rotate-180 ">
-      <iframe
-        className="w-full border-none"
-        height={1600}
-        src="https://coen-potgieter.github.io/CV/"
-        title="My CV"
-      />
+    <div className="w-full h-screen px-[2vw] md:pl-[15vw] md:pr-10 pt-[7vh] md:pt-[10vh] bg-my-white1 dark:bg-my-black1">
+      <div className="flex justify-start mb-1">
+        <a
+          href={CV}
+          download="Coen_Potgieter_CV.pdf"
+          className="px-4 hover:underline py-2 text-lightmode-text-col1 dark:text-darkmode-text-col1 font-semibold !transition-none"
+        >
+          Download CV
+        </a>
+      </div>
+
+      <div className="w-full h-11/12 border dark:invert dark:hue-rotate-180">
+        <embed src={CV} type="application/pdf" className="w-full h-full" />
+      </div>
     </div>
   );
 };
