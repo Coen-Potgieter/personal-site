@@ -1,4 +1,4 @@
-import SongsGrid from "./SongsGrid";
+import SongsGrid from "../components/agnostic/log/SongsGrid";
 
 const LogPage: React.FC = () => {
   return (
