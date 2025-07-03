@@ -10,7 +10,8 @@ const DesktopHeader: React.FC<DesktopHeaderProps> = ({}) => {
         <div className="flex justify-center w-fit px-10 gap-x-10 pt-2 h-fit border-b-2 dark:border-white/50 rounded-b-xl">
           <HeaderNavButton label="About" endpoint="/" />
           <HeaderNavButton label="Projects" endpoint="projects/" />
-          <HeaderNavButton label="CV" endpoint="/cv" />
+          <HeaderNavButton label="CV" endpoint="/cv/" />
+          <HeaderNavButton label="Log" endpoint="/log/" />
         </div>
       </div>
       <DesktopThemeToggleButton />
