@@ -1,6 +1,6 @@
-import GitHubSVG from "../../../assets/GitHubSVG";
-import LinkedInSVG from "../../../assets/LinkedInSVG";
-import LogoSVG from "../../../assets/LogoSVG";
+import GitHubSVG from "../../../assets/svg/GitHubSVG";
+import LinkedInSVG from "../../../assets/svg/LinkedInSVG";
+import LogoSVG from "../../../assets/svg/LogoSVG";
 import { handleProfileClick } from "../../../lib/helper-funcs";
 
 type SideBarProps = {};

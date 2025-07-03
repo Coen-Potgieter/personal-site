@@ -1,6 +1,6 @@
-import GitHubSVG from "../assets/GitHubSVG";
-import LinkedInSVG from "../assets/LinkedInSVG";
-import GoodReadsSVG from "../assets/GoodReadsSVG";
+import GitHubSVG from "../assets/svg/GitHubSVG";
+import LinkedInSVG from "../assets/svg/LinkedInSVG";
+import GoodReadsSVG from "../assets/svg/GoodReadsSVG";
 import PageNavButton from "../components/desktop/about_me/PageNavButton";
 import { handleProfileClick } from "../lib/helper-funcs";
 

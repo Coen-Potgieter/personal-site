@@ -1,6 +1,6 @@
-import LogoSVG from "../../../assets/LogoSVG";
-import GitHubSVG from "../../../assets/GitHubSVG";
-import LinkedInSVG from "../../../assets/LinkedInSVG";
+import LogoSVG from "../../../assets/svg/LogoSVG";
+import GitHubSVG from "../../../assets/svg/GitHubSVG";
+import LinkedInSVG from "../../../assets/svg/LinkedInSVG";
 import HamburgerButton from "./HamburgerButton";
 import MobileThemeToggleButton from "./MobileThemeToggleButton";
 

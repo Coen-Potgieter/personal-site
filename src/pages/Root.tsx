@@ -1,4 +1,4 @@
-import Header from "../components/agnostic/Header";
+import Header from "../components/agnostic/header/Header";
 import SideBar from "../components/desktop/header/SideBar";
 import { Outlet, useLocation } from "react-router-dom";
 

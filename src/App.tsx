@@ -5,7 +5,7 @@ import Root from "./pages/Root";
 import ErrorPage from "./pages/ErrorPage";
 import CVPage from "./pages/CVPage";
 import AboutPage from "./pages/AboutPage";
-import ProjectPage from "./components/pages/project/ProjectPage";
+import ProjectPage from "./pages/ProjectPage";
 
 const router = createBrowserRouter([
   {

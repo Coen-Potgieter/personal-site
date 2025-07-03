@@ -1,24 +1,13 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import MobileModal from "./MobileModal";
-import { useLocation } from "react-router-dom";
 
 type HamburgerButtonProps = {};
 const HamburgerButton: React.FC<HamburgerButtonProps> = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const location = useLocation();
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
-
-  // useEffect(() => {
-  //   if (isOpen) {
-  //     document.body.style.overflow = "hidden";
-  //     return () => {
-  //       document.body.style.overflow = "";
-  //     };
-  //   }
-  // }, [isOpen]);
 
   return (
     <>

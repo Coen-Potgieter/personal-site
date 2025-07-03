@@ -1,5 +1,5 @@
-import DesktopHeader from "../desktop/header/DesktopHeader";
-import MobileHeader from "../mobile/header/MobileHeader";
+import DesktopHeader from "../../desktop/header/DesktopHeader";
+import MobileHeader from "../../mobile/header/MobileHeader";
 
 type HeaderProps = {};
 const Header: React.FC<HeaderProps> = () => {

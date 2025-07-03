@@ -1,6 +1,6 @@
-import Tag from "./desktop/Tag";
+import Tag from "../../desktop/projects/Tag";
 import ProjectTitle from "./ProjectTitle";
-import DemoVidCarousel from "./mobile/DemoVidCarousel";
+import DemoVidCarousel from "../../mobile/projects/DemoVidCarousel";
 
 type ProjectCardProps = {
   title: string;

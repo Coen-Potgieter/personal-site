@@ -1,9 +1,9 @@
 import { createPortal } from "react-dom";
 import { useEffect } from "react";
 import ModalPageButton from "./ModalPageButton";
-import GitHubOctoCatSVG from "../../../assets/GitHubOctoCatSVG";
-import DocumentSVG from "../../../assets/DocumentSVG";
-import LogoSVG from "../../../assets/LogoSVG";
+import GitHubOctoCatSVG from "../../../assets/svg/GitHubOctoCatSVG";
+import DocumentSVG from "../../../assets/svg/DocumentSVG";
+import LogoSVG from "../../../assets/svg/LogoSVG";
 
 type MobileModalProps = {
   isOpen: boolean;
@@ -21,10 +21,6 @@ const MobileModal: React.FC<MobileModalProps> = ({ isOpen, closeModal }) => {
     }
   }, [isOpen]);
 
-  const moveToPage = () => {
-    closeModal();
-  };
-
   if (!isOpen) return null;
 
   return createPortal(
@@ -37,12 +33,14 @@ const MobileModal: React.FC<MobileModalProps> = ({ isOpen, closeModal }) => {
             label="Projects"
             endpoint="projects/"
             Icon={<GitHubOctoCatSVG size={40} />}
+            onClick={closeModal}
           />
           {/* CV Button */}
           <ModalPageButton
             label="CV"
             endpoint="cv/"
             Icon={<DocumentSVG size={35} />}
+            onClick={closeModal}
           />
           {/* About Button */}
           <ModalPageButton
@@ -54,6 +52,7 @@ const MobileModal: React.FC<MobileModalProps> = ({ isOpen, closeModal }) => {
                 className="text-my-orange1 dark:text-my-green1"
               />
             }
+            onClick={closeModal}
           />
         </div>
       </div>

@@ -1,4 +1,4 @@
-import DotSVG from "../../../assets/DotSVG";
+import DotSVG from "../../../assets/svg/DotSVG";
 import { NavLink } from "react-router-dom";
 
 type HeaderNavButtonProps = {

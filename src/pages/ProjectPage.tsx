@@ -1,10 +1,10 @@
-import ProjectCard from "./ProjectCard";
-import { PROJECT_DATA } from "../../../data/projects_data";
+import ProjectCard from "../components/agnostic/projects/ProjectCard";
+import { PROJECT_DATA } from "../data/projects_data";
 
 const ProjectPage: React.FC = () => {
   return (
     <div
-      className="flex w-full h-full justify-center pb-[50vh] md:ml-30 md:pr-20"
+      className="font-tinos flex w-full h-full justify-center pb-[50vh] md:ml-30 md:pr-20"
       style={{
         marginTop: "10vh",
       }}
