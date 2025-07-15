@@ -11,7 +11,6 @@ const DesktopHeader: React.FC<DesktopHeaderProps> = ({}) => {
           <HeaderNavButton label="About" endpoint="/" />
           <HeaderNavButton label="Projects" endpoint="projects/" />
           <HeaderNavButton label="CV" endpoint="/cv/" />
-          <HeaderNavButton label="Log" endpoint="/log/" />
         </div>
       </div>
       <DesktopThemeToggleButton />

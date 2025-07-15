@@ -1,7 +1,6 @@
 import GitHubSVG from "../assets/svg/GitHubSVG";
 import LinkedInSVG from "../assets/svg/LinkedInSVG";
 import GoodReadsSVG from "../assets/svg/GoodReadsSVG";
-import PageNavButton from "../components/desktop/about_me/PageNavButton";
 import { handleProfileClick } from "../lib/helper-funcs";
 
 type AboutPageProps = {};
@@ -9,7 +8,9 @@ type AboutPageProps = {};
 const AboutPage: React.FC<AboutPageProps> = () => {
   return (
     <div className="flex flex-col md:flex-row pt-[10vh] pl-[5vw] h-screen w-screen font-tinos">
+      {/* Left Half Div */}
       <div className="md:w-[50vw] w-screen">
+        {/* Name, Position, sub-thing */}
         <div className="flex flex-col h-fit md:h-3/12">
           <h1 className="text-4xl md:text-6xl font-bold text-lightmode-text-col1 dark:text-darkmode-text-col1">
             Coen Potgieter
@@ -21,11 +22,7 @@ const AboutPage: React.FC<AboutPageProps> = () => {
             I like coding things
           </p>
         </div>
-        <div className="hidden md:flex flex-col h-7/12 justify-start items-start">
-          <PageNavButton label="ABOUT" isActive={true} />
-          <PageNavButton label="PROJECTS" isActive={false} />
-          <PageNavButton label="LOG" isActive={false} />
-        </div>
+        {/* Name, Position, sub-thing */}
         <div className="flex flex-row text-lightmode-text-col2 gap-x-4 dark:text-darkmode-text-col2 py-5 md:pl-10 md:pt-0">
           <button
             onClick={() => handleProfileClick("github")}

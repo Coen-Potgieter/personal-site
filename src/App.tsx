@@ -6,7 +6,6 @@ import ErrorPage from "./pages/ErrorPage";
 import CVPage from "./pages/CVPage";
 import AboutPage from "./pages/AboutPage";
 import ProjectPage from "./pages/ProjectPage";
-import LogPage from "./pages/LogPage";
 
 const router = createBrowserRouter([
   {
@@ -16,7 +15,6 @@ const router = createBrowserRouter([
       { index: true, element: <AboutPage /> },
       { path: "projects", element: <ProjectPage /> },
       { path: "cv", element: <CVPage /> },
-      { path: "log", element: <LogPage /> },
     ],
     errorElement: <ErrorPage />,
   },
