@@ -46,7 +46,7 @@ const AboutPage: React.FC<AboutPageProps> = () => {
       </div>
 
       {/* Scrollable Content */}
-      <div className="flex flex-col w-screen md:w-[50vw] overflow-y-scroll pr-10 mt-5 scrollbar-hidden">
+      <div className="flex flex-col w-screen pb-[50vw] md:pb-0 md:w-[50vw] overflow-y-scroll pr-10 mt-5 scrollbar-hidden">
         {/* About Me */}
         <h1 className="text-4xl font-bold text-lightmode-text-col1 dark:text-darkmode-text-col1">
           About
